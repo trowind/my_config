@@ -31,14 +31,16 @@ set termencoding=utf-8
 set enc=utf-8 nobomb
 set history=100
 set nu
+set noexpandtab
 set cindent
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set autochdir
 set incsearch
 set hlsearch
-"set paste
+set paste
 set autowrite
 set novisualbell
 set noerrorbells
@@ -81,7 +83,7 @@ map <leader>p :bp<CR>
 function! RunPython()
 	silent !echo ""
 	silent !echo "<<< Run Python:" '%' "(`date +\%r`) >>>"
-	execute('!time python2.7 '. bufname("%").' --default')
+	execute('!time python3.7 '. bufname("%").' --default')
 endfunction
 
 function! Comment(tag)
@@ -103,10 +105,10 @@ if !exists("autocommands_loaded")
 		au FileType sql  map! <silent> <F5> <ESC>:w<CR>:!hive -f % <CR>
 		au FileType c,cpp  map  <silent> <F8> <ESC>:!clear; make test<CR>
 		au FileType c,cpp  map! <silent> <F8> <ESC>:!clear; make test<CR>
-		au FileType python map  <silent> <F8> <ESC>:w<CR>:!python2.7 -m unittest discover -v <CR>
-		au FileType python map! <silent> <F8> <ESC>:w<CR>:!python2.7 -m unittest discover -v <CR>
-		au FileType python map  <silent> <F9> <ESC>:w<CR>:!python2.7 % <CR>
-		au FileType python map! <silent> <F9> <ESC>:w<CR>:!python2.7 % <CR>
+		au FileType python map  <silent> <F8> <ESC>:w<CR>:!python3.7 -m unittest discover -v <CR>
+		au FileType python map! <silent> <F8> <ESC>:w<CR>:!python3.7 -m unittest discover -v <CR>
+		au FileType python map  <silent> <F9> <ESC>:w<CR>:!python3.7 % <CR>
+		au FileType python map! <silent> <F9> <ESC>:w<CR>:!python3.7 % <CR>
 		au FileType c,cpp  map  <silent> <F9> <ESC>:!clear; make<CR>
 		au FileType c,cpp  map! <silent> <F9> <ESC>:!clear; make<CR>
 		au FileType c,cpp  map  <silent> <F10> <ESC>:make clean;make -j4<CR>
