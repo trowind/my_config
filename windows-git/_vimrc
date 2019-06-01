@@ -161,8 +161,11 @@ nmap <space>gw :Gwrite<cr>
 set completeopt-=preview
 
 "" set color scheme
-colo ron
+"colo ron
+colo torte
 
 "" highlight NOTE comment
 "syn keyword		pythonTodo 		NOTE contained
 
+"" Windows gvim
+set guifont=나눔고딕코딩:h12:cHANGEUL:qDRAFT
