@@ -142,7 +142,7 @@ map! [13~ <F3>
 map! [14~ <F4>
 
 "" python-mode options
-let g:pymode_lint_ignore="W191,W0401,E501,E225,E266,E221,E128"
+let g:pymode_lint_ignore="W191,W0401,E501,E225,E266,E221,E128,E701"
 let g:pymode_indent=1
 let g:pymode_options_colorcolumn=0
 let g:pymode_rope_complete_on_dot=0

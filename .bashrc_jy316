@@ -4,8 +4,8 @@ source ~/.bash_profile
 
 #export CDPATH="$HOME/jooyoung"
 
-#export http_proxy=http://proxy.cns.widerlab.io:8080
-#export https_proxy=http://proxy.cns.widerlab.io:8080
+export http_proxy=http://proxy.cns.widerlab.io:8080
+export https_proxy=http://proxy.cns.widerlab.io:8080
 
 alias vi='vim -u $HOME/jooyoung/.vimrc_jy316'
 alias lh='ls -lah'
@@ -33,6 +33,7 @@ alias gd="git diff --color"
 alias gl="git log  --graph --decorate --oneline --color --all"
 alias gls="git log --graph --decorate --color --name-status"
 alias gcred="git config --global credential.helper cache"
+alias hive2="/data/cluster/hive2/bin/hive"
 
 ## set history
 HISTFILE="$HOME/jooyoung/.my_history"
@@ -41,9 +42,9 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="pwd:ls:cd:lh"
 export HISTSIZE=1000
 
-#export LANG=ko_kr.UTF-8
-#export LC_ALL=ko_KR.utf-8
-#export LANGUAGE="ko_KR;ko;en_GB"
+export LANG=ko_kr.UTF-8
+export LC_ALL=ko_KR.utf-8
+export LANGUAGE="ko_KR;ko;en_GB"
 export LESSCHARSET=UTF-8
 
 #export PYPY_BIN=/data/cluster/pypy/bin/pypy
