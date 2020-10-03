@@ -1,0 +1,17 @@
+{
+     "shortcuts": [
+     {
+            "command": "notebook:clear-all-cell-outputs",
+            "keys": [
+                "Ctrl Shift Y"
+            ],
+            "selector": "body"
+    }, {
+        "command": "notebook:restart-clear-output",
+        "keys": [
+            "Ctrl Shift K"
+        ],
+        "selector": "body"
+    }
+    ]
+}

@@ -40,3 +40,5 @@ git_config_me() {
 	git config user.name "Joo-Young Lee"
 	git config user.email "jooyoung@widerplanet.com"
 }
+
+alias tmuxjy='tmux -2 -u -L jy316 -f ~/my_config/.tmux.conf'
