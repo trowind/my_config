@@ -1,13 +1,13 @@
 #!/bin/bash
 
-source ~/.bash_profile
+#source ~/.bash_profile
 
 #export CDPATH="$HOME/jooyoung"
 
 export http_proxy=http://proxy.cns.widerlab.io:8080
 export https_proxy=http://proxy.cns.widerlab.io:8080
 
-alias vi='vim -u $HOME/jooyoung/.vimrc_jy316'
+alias vi='vim -u $HOME/my_config/.vimrc_jy316'
 alias lh='ls -lah'
 alias ll='ls -la'
 alias ..="cd .."
@@ -15,7 +15,7 @@ alias ...="cd ../.."
 alias ....="cd ../../../"
 
 ## git
-source $HOME/jooyoung/.git-prompt.sh
+source $HOME/my_config/.git-prompt.sh
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
 bold=$(tput bold)
