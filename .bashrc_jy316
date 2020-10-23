@@ -4,24 +4,33 @@ source ~/.bash_profile
 
 #export CDPATH="$HOME/jooyoung"
 
+export MY_CONF_DIR=$HOME/jooyoung/my_config
 export http_proxy=http://proxy.cns.widerlab.io:8080
 export https_proxy=http://proxy.cns.widerlab.io:8080
 
-alias vi='vim -u $HOME/jooyoung/.vimrc_jy316'
+#source ${MY_CONF_DIR}/common_config.sh
+alias tmuxjy='tmux -L jy316 -f ${MY_CONF_DIR}/.tmux.conf'
+alias vi='vim -u ${MY_CONF_DIR}/.vimrc_jy316'
+alias hive2="/data/cluster/hive2/bin/hive"
+
+source ${MY_CONF_DIR}/.git-prompt.sh
+
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+cyan=$(tput setaf 6)
+bold=$(tput bold)
+red=$(tput setaf 1)
+reset=$(tput sgr0)
+
+PS1='\[$cyan\]\D{%Y%m%d-%H:%M:%S} \[$green\]\u@\h\[$reset\]\w\[$yellow\]$(__git_ps1)\[$reset\]\n\$ '
+
+## aliass
 alias lh='ls -lah'
 alias ll='ls -la'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../../"
 
-## git
-source $HOME/jooyoung/.git-prompt.sh
-green=$(tput setaf 2)
-yellow=$(tput setaf 3)
-bold=$(tput bold)
-red=$(tput setaf 1)
-reset=$(tput sgr0)
-PS1='\[$green\]\u@\h\[$reset\]:\w\[$yellow\]$(__git_ps1)\[$reset\]\n\$ '
 alias g="git"
 alias ga="git add"
 alias gap="git add -p"
@@ -33,7 +42,6 @@ alias gd="git diff --color"
 alias gl="git log  --graph --decorate --oneline --color --all"
 alias gls="git log --graph --decorate --color --name-status"
 alias gcred="git config --global credential.helper cache"
-alias hive2="/data/cluster/hive2/bin/hive"
 
 ## set history
 HISTFILE="$HOME/jooyoung/.my_history"
