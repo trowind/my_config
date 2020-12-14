@@ -3,7 +3,7 @@
 
 #export CDPATH="$HOME/jooyoung"
 
-source ${MY_CONF_DIR}/.git-prompt.sh
+source ${JYLEE_CONF_DIR}/.git-prompt.sh
 
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
@@ -32,3 +32,4 @@ alias gd="git diff --color"
 alias gl="git log  --graph --decorate --oneline --color --all"
 alias gls="git log --graph --decorate --color --name-status"
 alias gcred="git config --global credential.helper cache"
+alias tmuxjy_new="tmuxjy new -s jooyoung"
