@@ -2,7 +2,8 @@
 
 . ${JYLEE_CONF_DIR}/common_conf.sh
 
-export LESSCHARSET=UTF-8
+alias tmuxjy='tmux -2 -u -L jy316 -f ${JYLEE_CONF_DIR}/gcp/tmux.conf'
+alias tmuxjy_new="tmuxjy new -s jooyoung"
 alias vi='vim -u ${JYLEE_CONF_DIR}/gcp/vimrc.vim'
 
 git_config_me() {
@@ -10,5 +11,4 @@ git_config_me() {
 	git config user.email "jooyoung@widerplanet.com"
 }
 
-alias tmuxjy='tmux -2 -u -L jy316 -f ${JYLEE_CONF_DIR}/gcp/tmux.conf'
-alias tmuxjy_new="tmuxjy new -s jooyoung"
+export LESSCHARSET=UTF-8
