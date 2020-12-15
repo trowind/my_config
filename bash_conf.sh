@@ -1,55 +1,11 @@
 #!/bin/bash
 
-source ~/.bash_profile
+. ${JYLEE_CONF_DIR}/common_conf.sh
 
-#export CDPATH="$HOME/jooyoung"
+#alias tmuxjy='tmux -L jy316 -f ${JYLEE_CONF_DIR}/.tmux.conf'
+alias vi='vim -u ${JYLEE_CONF_DIR}/.vimrc_jy316'
 
-export MY_CONF_DIR=$HOME/jooyoung/my_config
-export http_proxy=http://proxy.cns.widerlab.io:8080
-export https_proxy=http://proxy.cns.widerlab.io:8080
-
-#source ${MY_CONF_DIR}/common_config.sh
-alias tmuxjy='tmux -L jy316 -f ${MY_CONF_DIR}/.tmux.conf'
-alias vi='vim -u ${MY_CONF_DIR}/.vimrc_jy316'
-alias hive2="/data/cluster/hive2/bin/hive"
-
-source ${MY_CONF_DIR}/.git-prompt.sh
-
-green=$(tput setaf 2)
-yellow=$(tput setaf 3)
-cyan=$(tput setaf 6)
-bold=$(tput bold)
-red=$(tput setaf 1)
-reset=$(tput sgr0)
-
-PS1='\[$cyan\]\D{%Y%m%d-%H:%M:%S} \[$green\]\u@\h\[$reset\]\w\[$yellow\]$(__git_ps1)\[$reset\]\n\$ '
-
-## aliass
-alias lh='ls -lah'
-alias ll='ls -la'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../../"
-
-alias g="git"
-alias ga="git add"
-alias gap="git add -p"
-alias gc="git commit"
-alias gs="git status"
-alias go="git checkout"
-alias gsl='git status | less -REX'
-alias gd="git diff --color"
-alias gl="git log  --graph --decorate --oneline --color --all"
-alias gls="git log --graph --decorate --color --name-status"
-alias gcred="git config --global credential.helper cache"
-
-## set history
-HISTFILE="$HOME/jooyoung/.my_history"
-export HISTTIMEFORMAT="%F %T "
-export HISTCONTROL=ignoredups
-export HISTIGNORE="pwd:ls:cd:lh"
-export HISTSIZE=1000
-
+export CDPATH="$HOME/jooyoung"
 export LANG=ko_kr.UTF-8
 export LC_ALL=ko_KR.utf-8
 export LANGUAGE="ko_KR;ko;en_GB"
@@ -57,6 +13,7 @@ export LESSCHARSET=UTF-8
 
 #export PYPY_BIN=/data/cluster/pypy/bin/pypy
 
+alias hive2="/data/cluster/hive2/bin/hive"
 export HIVE_UDF_JARS="/data/cluster/hive_udf/wp-udf.jar,/data/cluster/hive_udf/wp_location_udf.jar,/data/cluster/hive_udf/json-simple-1.1.1.jar,/data/cluster/hive_udf/brickhouse-0.7.1-SNAPSHOT.jar,/data/cluster/hive_udf/joda-time-2.4.jar,/data/cluster/hive_udf/qubole-hive-JDBC-0.0.6.jar,/data/cluster/hive_udf/woothee.jar"
 
 alias run_spark_single='PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS="notebook --no-browser --port=50020 --ip=0.0.0.0" pyspark --num-executors 1 --executor-memory 64g --executor-cores 39 --jars ${HIVE_UDF_JARS}'
@@ -68,8 +25,6 @@ alias nbconvert="jupyter nbconvert --config=/home/sysoper/jooyoung/jupyter_nbcon
 
 #. ${HOME}/jooyoung/python2.7/bin/activate
 alias activate=". ${HOME}/jooyoung/python2.7/bin/activate"
-
-. ${HOME}/jooyoung/z.sh
 
 git_config_me() {
 	git config user.name "Joo-Young Lee"

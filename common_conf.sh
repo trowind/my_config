@@ -1,9 +1,7 @@
 #!/bin/bash
 
-
-#export CDPATH="$HOME/jooyoung"
-
-source ${JYLEE_CONF_DIR}/.git-prompt.sh
+. ${JYLEE_CONF_DIR}/.git-prompt.sh
+. ${JYLEE_CONF_DIR}/z.sh
 
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
@@ -33,3 +31,9 @@ alias gl="git log  --graph --decorate --oneline --color --all"
 alias gls="git log --graph --decorate --color --name-status"
 alias gcred="git config --global credential.helper cache"
 alias tmuxjy_new="tmuxjy new -s jooyoung"
+
+HISTFILE="$HOME/.jylee_history"
+export HISTTIMEFORMAT="%F %T "
+export HISTCONTROL=ignoredups
+export HISTIGNORE="pwd:ls:cd:lh"
+export HISTSIZE=5000
