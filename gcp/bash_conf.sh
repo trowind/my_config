@@ -3,7 +3,7 @@
 . ${JYLEE_CONF_DIR}/common_conf.sh
 
 export LESSCHARSET=UTF-8
-alias vi='vim -u ${JYLEE_CONF_DIR}/.vimrc_jy316'
+alias vi='vim -u ${JYLEE_CONF_DIR}/gcp/vimrc.vim'
 
 git_config_me() {
 	git config user.name "Joo-Young Lee"
@@ -11,3 +11,4 @@ git_config_me() {
 }
 
 alias tmuxjy='tmux -2 -u -L jy316 -f ${JYLEE_CONF_DIR}/gcp/tmux.conf'
+alias tmuxjy_new="tmuxjy new -s jooyoung"

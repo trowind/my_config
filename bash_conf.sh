@@ -3,7 +3,8 @@
 . ${JYLEE_CONF_DIR}/common_conf.sh
 
 #alias tmuxjy='tmux -L jy316 -f ${JYLEE_CONF_DIR}/.tmux.conf'
-alias vi='vim -u ${JYLEE_CONF_DIR}/.vimrc_jy316'
+#alias vi='vim -u ${JYLEE_CONF_DIR}/.vimrc_jy316'
+alias vi='vim -u ${JYLEE_CONF_DIR}/vimrc.vim'
 
 export CDPATH="$HOME/jooyoung"
 export LANG=ko_kr.UTF-8
