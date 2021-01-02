@@ -12,3 +12,4 @@ git_config_me() {
 }
 
 export LESSCHARSET=UTF-8
+git config --global core.editor vim

@@ -10,7 +10,7 @@ bold=$(tput bold)
 red=$(tput setaf 1)
 reset=$(tput sgr0)
 
-PS1='\[$cyan\]\D{%Y%m%d-%H:%M:%S} \[$green\]\u@\h\[$reset\]\w\[$yellow\]$(__git_ps1)\[$reset\]\n\$ '
+PS1='\[$cyan\]\D{%Y%m%d %H:%M:%S} \[$green\]\u@\h\[$reset\]\w\[$yellow\]$(__git_ps1)\[$reset\]\n\$ '
 
 ## aliass
 alias lh='ls -lah'
