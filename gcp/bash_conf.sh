@@ -8,7 +8,7 @@ alias vi='vim -u ${JYLEE_CONF_DIR}/gcp/vimrc.vim'
 
 git_config_me() {
 	git config user.name "Joo-Young Lee"
-	git config user.email "jooyoung@widerplanet.com"
+	git config user.email "jy316.lee@navercorp.com"
 }
 
 export LESSCHARSET=UTF-8

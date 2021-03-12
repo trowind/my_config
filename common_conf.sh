@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . ${JYLEE_CONF_DIR}/.git-prompt.sh
-. ${JYLEE_CONF_DIR}/z.sh
 
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
